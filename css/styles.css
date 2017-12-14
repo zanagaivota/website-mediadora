@@ -1,0 +1,560 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+
+body {
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0px;
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+.entypo-menu, .entypo-cancel {
+    font-size: 2em;
+}
+
+
+section {
+    border-bottom: 0.5px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+#hero {   
+    background: -webkit-image-set( url('../img/family-1920x1280.jpg') 1x, url('../img/family-3669x2446.jpg') 2x ) center center;
+    background: webkit-image-set( url('../img/family-1920x1280.jpg') 1x, url('../img/family-3669x2446.jpg') 2x ) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    margin: 0px;
+}
+
+.hero-area {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero-util {
+    margin-right: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 100%;
+}
+
+.hero-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+/*retirar*/
+.row100 {
+    width: 100%;
+    display: flex;
+}
+
+.card, .card-image {
+    display: none;
+}
+
+.card-logo, .card-image, .card, .card-icon {
+    width: 50%;
+    max-width: 100px;
+}
+
+.card-icon {
+    background: brown;
+}
+
+.card-icon-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.text {
+   position:  absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   text-align: center;
+   color: white;
+}
+
+.text-block {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.big-nav-image {
+    width: 100%;
+    height: 100%;
+}
+
+.big-nav-icon {
+    display: block
+}
+
+
+.container-card-img { 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 800px;
+}
+
+#card-insurance, #card-companies, #card-about1, #card-about2, #card-about3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+#card-insurance img, #card-companies img, #card-about1 img, #card-about2 img, #card-about3 img {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+#card-insurance .back, #card-companies .back, #card-about1 .back, #card-about2 .back, #card-about3 .back {
+    transform: rotateX( 180deg );
+}
+
+#card-insurance.flipped, #card-companies.flipped, #card-about1.flipped, #card-about2.flipped, #card-about3.flipped {
+    transform: rotateX( 180deg );
+}
+
+
+
+.navigationBar, navigationBar original, .navigationBar cloned {
+    background-color: brown;
+    width: 100%;
+}
+
+.navigationBar-area {
+    max-width: 960px;
+    min-height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navigationBar-util {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 100%;
+}
+
+.navigationBar-block {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 50px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+    -webkit-align-self: center;
+}
+
+.navigation {
+    color: #fff;
+    align-self: center;
+    -webkit-align-self: center;
+    display: none;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+}
+
+.navigation-item {
+    padding: 0 10px;
+    border-right: solid 1px #cccccc;
+}
+
+.navigation-item:last-child {
+    padding-right: 0px;
+    border-right: none;
+}
+
+.navigation-responsive {
+    width: 100%;
+    display: none;
+}
+
+.navigation-responsive.open {
+    display: block;
+  }
+
+.navigation-icon {
+    display: none;
+    align-self: center;
+    -webkit-align-self: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigation-close {
+    display: none;
+    align-self: center;
+    -webkit-align-self: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigation-icon.open, .navigation-close.open {
+    display: inherit;
+}
+
+.navigation-responsive-item {
+    line-height: 30px;
+    width: 100%;
+}
+
+.navigation-responsive-item a {
+    text-decoration-line: none;
+    display: block;
+    color: #fff;
+}
+
+.navigation-responsive-item span {
+    border-bottom: solid 1px burlywood;
+}
+
+
+/*--- Insurance - Tipos de Seguros ---*/
+.insurance-area {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.insurance-util {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 40px 0px;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 100%;
+}
+
+.insurance-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.insurance-title {
+    width: 100%;
+    font-size: 4em;
+    line-height: 70px;
+}
+
+.insurance-subtitle {
+    width: 100%;
+}
+
+.insurance-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.insurance-item {
+    display: flex;
+    width: 100%;
+    max-width: 360px;
+}
+
+.insurance-item-photo {
+    width: 100px;
+
+}
+
+.insurance-item-description {
+    padding-left: 10px;
+
+}
+
+.insurance-item-name {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.insurance-item-text {
+    font-size: 0.8em;
+}
+
+.insurance-item-more {
+
+}
+
+
+/* Companies - Companhias de Seguros */
+
+.companies-area {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.companies-util {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 40px 0px;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 100%;
+}
+
+.companies-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.companies-text-block {
+    width: 100%;
+}
+
+.companies-title {
+    width: 100%;
+    font-size: 4em;
+    line-height: 70px;
+}
+
+.companies-subtitle {
+    width: 100%;
+}
+
+.companies-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.companies-list-item {
+    align-self: center;
+    -webkit-align-self: center;
+    text-align: center;
+    width: 100%;  
+}
+
+.companies-list-img {
+    max-width: 150px;
+    padding: 20px 10px;
+}
+
+/*--- About - Quem Somos ---*/
+
+#about {
+    background: burlywood;
+}
+
+.about-area {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-util {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 40px 0px;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 100%;
+}
+
+.about-block {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.about-title {
+    width: 100%;
+    font-size: 4em;
+    line-height: 70px;
+}
+
+.about-subtitle {
+    width: 100%;
+}
+
+.about-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.about-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.about-longDescription, .about-contacts {
+    width: 100%;
+}
+
+.about-longDescription-area,.about-contacts-area {
+    padding-right: 20px;
+} 
+
+.schedule, .contacts {
+    margin: 16px 0px;
+}
+
+.schedule-title, .contacts-title {
+    font-size: 1.5em;
+}
+
+.contact, .doclink {
+    padding-left: 10px;
+}
+
+.doclink, .emaillink {
+    color: #fff;
+}
+
+
+
+.about-map {
+    height: 400px;
+    width: 100%;
+}
+
+
+/*--- Footer ---*/
+
+.footer {
+    background: #000;
+}
+
+
+.footer-area {
+    max-width: 960px;
+    min-height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-util {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 100%;
+}
+
+.footer-block {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 60px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    color: #fff;
+}
+
+.copyright {
+    align-self: center;
+    -webkit-align-self: center;
+}
+
+
+
+
+
+
+/*--- Responsive styling ---*/
+@media screen and (min-width: 569px) {
+    
+    .navigation {
+        display: flex;
+    }
+
+    .navigation-responsive {
+        display: none;
+    }
+
+    .navigation-responsive.open {
+        display: none;
+    }
+
+    .navigation-icon, .navigation-close, .navigation-icon.open, .navigation-close.open {
+        display: none;
+    }
+
+    .insurance-item {
+        width: 47%;
+        max-width: none;
+    }    
+
+    .companies-list-item {
+        width: 50%;  
+    }
+
+    .about-longDescription, .about-contacts {
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-height: 569px), screen and (min-width: 569px) {
+    .card, .card-image {
+        display: block;
+    } 
+
+    .card-logo, .card-image, .card, .card-icon {
+        width: 20%;
+        max-width: none;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .insurance-item-photo {
+        width: 150px;
+    }
+
+    .about-text {
+        width: 66%;
+    }
+
+    .companies-list-item {
+        width: 33%;  
+    }
+
+}
