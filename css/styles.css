@@ -38,6 +38,7 @@ section:last-of-type {
     max-width: 960px;
     margin-right: auto;
     margin-left: auto;
+    min-height: 100vh;
 }
 
 .hero-util {
@@ -45,7 +46,13 @@ section:last-of-type {
     margin-left: 10px;
     overflow: hidden;
     text-overflow: clip;
-    height: 100%;
+    min-height: 100vh;
+}
+
+.hero-block-small-screens {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
 }
 
 .hero-block {
@@ -53,19 +60,45 @@ section:last-of-type {
     flex-wrap: wrap;
 }
 
-.big-nav {
+.container-big-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.container-big-nav-small-screens {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    -webkit-align-items: center;
+} 
+
+.big-nav-small-screens {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: center;
     -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
 }
 
-/*retirar*/
+.big-nav {
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
 .row100 {
     width: 100%;
     display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
 }
 
 .card, .card-image {
@@ -294,7 +327,6 @@ section:last-of-type {
 
 .insurance-item-photo {
     width: 100px;
-
 }
 
 .insurance-item-description {
@@ -531,7 +563,16 @@ section:last-of-type {
 }
 
 
-@media screen and (min-height: 569px), screen and (min-width: 569px) {
+@media screen and (min-height: 800px) and (min-width: 569px) {
+
+    .big-nav {
+        display: flex;
+    }
+
+    .hero-block-small-screens {
+        display: none;
+    }
+
     .card, .card-image {
         display: block;
     } 
