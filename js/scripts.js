@@ -132,7 +132,7 @@ navigationCloseFixed.classList.remove('open');
 e.stopPropagation();
 });
 close_element1Fixed.addEventListener('click', function(e) {
-dradrawerFixedwer.classList.remove('open');
+drawerFixed.classList.remove('open');
 navigationIconFixed.classList.add('open');
 navigationCloseFixed.classList.remove('open');
 e.stopPropagation();
