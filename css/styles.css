@@ -154,7 +154,7 @@ section:last-of-type {
     perspective: 800px;
 }
 
-#card-insurance, #card-companies, #card-about1, #card-about2, #card-about3 {
+#card-img1, #card-img2, #card-img3, #card-img4, #card-img5, #card-img6 {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -162,7 +162,7 @@ section:last-of-type {
     transition: transform 1s;
 }
 
-#card-insurance img, #card-companies img, #card-about1 img, #card-about2 img, #card-about3 img {
+#card-img1 img, #card-img2 img, #card-img3 img, #card-img4 img, #card-img5 img, #card-img6 img {
     margin: 0;
     display: block;
     position: absolute;
@@ -171,11 +171,11 @@ section:last-of-type {
     backface-visibility: hidden;
 }
 
-#card-insurance .back, #card-companies .back, #card-about1 .back, #card-about2 .back, #card-about3 .back {
+#card-img1 .back, #card-img2 .back, #card-img3 .back, #card-img4 .back, #card-img5 .back, #card-img6 .back {
     transform: rotateX( 180deg );
 }
 
-#card-insurance.flipped, #card-companies.flipped, #card-about1.flipped, #card-about2.flipped, #card-about3.flipped {
+#card-img1.flipped, #card-img2.flipped, #card-img3.flipped, #card-img4.flipped, #card-img5.flipped , #card-img6.flipped {
     transform: rotateX( 180deg );
 }
 
