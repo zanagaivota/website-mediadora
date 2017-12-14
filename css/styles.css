@@ -114,6 +114,10 @@ section:last-of-type {
     background: brown;
 }
 
+.card-icon:hover {
+    opacity: 0.8;
+}
+
 .card-icon-container {
     position: relative;
     width: 100%;

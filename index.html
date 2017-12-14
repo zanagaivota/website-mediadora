@@ -35,7 +35,7 @@
                                 <div class="card-icon">
                                     <div class="card-icon-container"> 
                                         <div class="text">
-                                            <div class="text-block"><span class="entypo-location big-nav-icon"></span>Seguros
+                                            <div class="text-block"><span class="entypo-globe big-nav-icon"></span>Seguradoras
                                             </div> 
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@
                                 <div class="card-icon">
                                     <div class="card-icon-container"> 
                                         <div class="text">
-                                            <div class="text-block"><span class="entypo-location big-nav-icon"></span>Seguradoras
+                                            <div class="text-block"><span class="entypo-up-open-big big-nav-icon"></span>Seguros
                                             </div> 
                                         </div>
                                     </div>
@@ -396,104 +396,6 @@
             interval += 4000;
         }, this);
 
-
-
-
-
-
-
-        function keepSwitchingPicAutoInsurance() {
-            setInterval(switchPicAutoInsurance, 3000);       
-        }
-
-        function switchPicAutoInsurance() {
-           
-            className = "flipped"
-            
-            var img1 = document.getElementById('card-insurance');
-            var img1Classes = img1.classList;
-            if (img1Classes.length > 0) {            
-                img1.classList.remove(className);
-            } else {
-                img1.classList.add(className);
-            }
-        }
-
-        function keepSwitchingPicAutoCompanies() {
-            setInterval(switchPicAutoCompanies, 8000);       
-        }
-        
-
-        function switchPicAutoCompanies() {
-           
-            className = "flipped"
-            
-            var img1 = document.getElementById('card-companies');
-            var img1Classes = img1.classList;  
-            if (img1Classes.length > 0) {                
-                img1.classList.remove(className);
-            } else {
-                img1.classList.add(className);
-            }
-        }
-
-        function keepSwitchingPicAutoAbout1() {
-            setInterval(switchPicAutoAbout1, 20000);       
-        }
-
-        function switchPicAutoAbout1() {
-           
-            className = "flipped"
-            
-            var img1 = document.getElementById('card-about1');
-            var img1Classes = img1.classList;  
-            if (img1Classes.length > 0) {              
-                img1.classList.remove(className);
-            } else {
-                img1.classList.add(className);
-            }
-        }
-
-
-        function keepSwitchingPicAutoAbout2() {
-            setInterval(switchPicAutoAbout2, 6000);       
-        }
-
-        function switchPicAutoAbout2() {
-           
-            className = "flipped"
-            
-            var img1 = document.getElementById('card-about2');
-            var img1Classes = img1.classList;
-            if (img1Classes.length > 0) {              
-                img1.classList.remove(className);
-            } else {
-                img1.classList.add(className);
-            }
-        }
-
-        function keepSwitchingPicAutoAbout3() {
-            setInterval(switchPicAutoAbout3, 11000);       
-        }
-
-        function switchPicAutoAbout3() {
-           
-            className = "flipped"
-            
-            var img1 = document.getElementById('card-about3');
-            var img1Classes = img1.classList;
-            if (img1Classes.length > 0) {              
-                img1.classList.remove(className);
-            } else {
-                img1.classList.add(className);
-            }
-        }
-
-        /*keepSwitchingPicAutoInsurance();
-        keepSwitchingPicAutoCompanies();
-        keepSwitchingPicAutoAbout1();
-        keepSwitchingPicAutoAbout2();
-        keepSwitchingPicAutoAbout3();*/
 
 
       function initMap() {
