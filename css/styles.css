@@ -25,8 +25,8 @@ section:last-of-type {
 }
 
 #hero {   
-    background: -webkit-image-set( url('../img/family-1920x1280.jpg') 1x, url('../img/family-3669x2446.jpg') 2x ) center center;
-    background: webkit-image-set( url('../img/family-1920x1280.jpg') 1x, url('../img/family-3669x2446.jpg') 2x ) center center;
+    background: -webkit-image-set( url('../img/family-568x378.jpg') 1x, url('../img/family-1920x1280.jpg') 2x ) center center;
+    background: webkit-image-set( url('../img/family-568x378.jpg') 1x, url('../img/family-1920x1280.jpg') 2x ) center center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -56,7 +56,7 @@ section:last-of-type {
 }
 
 .hero-block {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
 }
 
@@ -87,7 +87,7 @@ section:last-of-type {
 
 .big-nav {
     width: 100%;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: center;
@@ -569,10 +569,10 @@ section:last-of-type {
 
 @media screen and (min-height: 800px) and (min-width: 569px) {
 
-    .big-nav {
+    .hero-block {
         display: flex;
     }
-
+    
     .hero-block-small-screens {
         display: none;
     }
@@ -602,4 +602,39 @@ section:last-of-type {
         width: 33%;  
     }
 
+}
+
+
+
+/*../img/family-1920x1280.jpg*/
+
+@media screen and (min-width: 569px) and (max-width: 768px), screen and (min-height: 370px) and (max-height: 512px) {
+
+    #hero {
+        background: -webkit-image-set( url('../img/family-768x512.jpg') 1x, url('../img/family-1920x1280.jpg') 2x ) center center;
+        background: webkit-image-set( url('../img/family-768x512.jpg') 1x, url('../img/family-1920x1280.jpg') 2x ) center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px), screen and (min-height: 513px) and (max-height: 683px) {
+
+    #hero {
+        background: -webkit-image-set( url('../img/family-1024x683.jpg') 1x, url('../img/family-1920x1280.jpg') 2x ) center center;
+        background: webkit-image-set( url('../img/family-1024x683.jpg') 1x, url('../img/family-1920x1280.jpg') 2x ) center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (min-width: 1025px), screen and (min-height: 684px) {
+
+    #hero {
+        background: url('../img/family-1920x1280.jpg') center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
