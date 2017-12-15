@@ -423,7 +423,7 @@ section:last-of-type {
 .about-util {
     margin-right: 10px;
     margin-left: 10px;
-    padding: 40px 0px;
+    
     overflow: hidden;
     text-overflow: clip;
     height: 100%;
@@ -449,16 +449,17 @@ section:last-of-type {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .about-text {
     width: 100%;
+    padding: 40px 0px;
     display: flex;
     flex-wrap: wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
 }
 
 .about-longDescription, .about-contacts {
@@ -485,12 +486,78 @@ section:last-of-type {
     color: #fff;
 }
 
+.form {
+    width: 100%;
+    background: brown;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
 
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px 10px;
+}
+
+.form-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.form-element {
+    font-size: 14px;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+button {
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    font-family: 'Rajdhani', sans-serif;
+    background: #fff;
+    color: brown;
+}
+
+button:hover {
+    background: burlywood;
+    color: #fff;
+}
+
+label {
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+input:focus, textarea:focus {
+    border: solid 1px burlywood;
+}
 
 .about-map {
     height: 400px;
     width: 100%;
 }
+
+
 
 
 /*--- Footer ---*/
@@ -595,8 +662,13 @@ section:last-of-type {
     }
 
     .about-text {
-        width: 66%;
+        width: 63%;
     }
+
+    .form {
+        width: 31%;
+    }
+
 
     .companies-list-item {
         width: 33%;  

@@ -340,8 +340,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <form id="about-contactform">
-                            </form>
+                            <div class="form">     
+                                <form action="/my-handling-form-page" method="post"> 
+                                    <div class="form-item">
+                                        <label class="form-element" for="name">Nome:</label>
+                                        <input class="form-element" type="text" id="name" name="user_name" />
+                                    </div>
+                                    <div class="form-item">
+                                        <label class="form-element" for="mail">E-mail:</label>
+                                        <input class="form-element" type="email" id="mail" name="user_email" />
+                                    </div>
+                                    <div class="form-item">
+                                        <label class="form-element" for="subject">Assunto:</label>
+                                        <input class="form-element" type="text" id="subject" name="user_subject" />
+                                    </div>
+                                    <div class="form-item">
+                                        <label class="form-element" for="msg">Mensagem:</label>
+                                        <textarea class="form-element" id="msg" name="user_message"></textarea>
+                                    </div>         
+                                    <div class="form-item"">
+                                        <button class="form-element" type="submit">Enviar</button>
+                                    </div>               
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
