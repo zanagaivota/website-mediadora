@@ -404,7 +404,7 @@ section:last-of-type {
 }
 
 .companies-list-img {
-    max-width: 150px;
+    max-width: 100px;
     padding: 20px 10px;
 }
 
@@ -646,6 +646,14 @@ textarea {
 
 
 /*--- Responsive styling ---*/
+
+@media screen and (min-width: 375px) {
+    .companies-list-item {
+        width: 50%;  
+    }
+}
+
+
 @media screen and (min-width: 569px) {
     
     .navigation {
@@ -670,7 +678,7 @@ textarea {
     }    
 
     .companies-list-item {
-        width: 50%;  
+        width: 33%;  
     }
 
     .about-longDescription, .about-contacts {
@@ -716,7 +724,7 @@ textarea {
 
 
     .companies-list-item {
-        width: 33%;  
+        width: 25%;  
     }
 
 }
