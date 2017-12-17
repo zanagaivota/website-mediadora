@@ -1,9 +1,5 @@
 
-
-
 // Create a clone of the menu, right next to original. source: https://codepen.io/senff/pen/ayGvD
-
-
 
 var navigationBar = document.querySelector('.navigationBar');
 var navigationSticky = navigationBar.cloneNode(true);
@@ -15,7 +11,6 @@ navigationSticky.classList.add('cloned');
 navigationSticky.setAttribute('style', 'display: none; position: fixed; top: 0px; margin-top: 0px; z-index: 500;');
 
 scrollIntervalID = setInterval(stickIt, 10);          
-
 
 function stickIt() {
 
@@ -41,34 +36,6 @@ function stickIt() {
     }
 }
 
-
-
-/*$('#navigationBar').addClass('original').clone().insertAfter('#navigationBar').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
-
-scrollIntervalID = setInterval(stickIt, 10);
-
-function stickIt() {
-
-  var orgElementPos = $('.original').offset();
-  orgElementTop = orgElementPos.top;               
-
-  if ($(window).scrollTop() >= (orgElementTop)) {
-    // scrolled past the original position; now only show the cloned, sticky element.
-
-    // Cloned element should always have same left position and width as original element.     
-    orgElement = $('.original');
-    coordsOrgElement = orgElement.offset();
-    leftOrgElement = coordsOrgElement.left;  
-    widthOrgElement = orgElement.css('width');
-    $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();
-    $('.original').css('visibility','hidden');
-  } else {
-    // not scrolled past the menu; only show the original menu.
-    $('.cloned').hide();
-    $('.original').css('visibility','visible');
-  }
-}
-*/
 
 // Opens the menu when the hamburguer icon is clicked.
 
@@ -111,62 +78,6 @@ e.stopPropagation();
 });
 
 
-
-/*var formInput = document.querySelector('input');
-formInput.addEventListener('input', function(e) {
-  if (formInput.value.length === 0) {
-    var inputID=formInput.getAttribute('id');
-    var item=formInput.parentNode
-    var formLabel = item.querySelector('label')
-    formInput.classList.remove('decrease');
-    formLabel.classList.remove('show');
-    formLabel.classList.add('hide');
-    formLabel.classList.remove('up');
-  }
-  else {
-    var inputID=formInput.getAttribute('id');
-    var item=formInput.parentNode
-    var formLabel = item.querySelector('label')
-    formInput.classList.add('decrease');
-    formLabel.classList.add('show');
-    formLabel.classList.remove('hide');
-    formLabel.classList.remove('show');
-    formLabel.classList.add('up');
-  }
-  e.stopPropagation();
-});*/
-
-
-var formInputs = document.querySelectorAll('input,textarea');
-formInputs.forEach(function(element) {
-  element.addEventListener('input', function(e) {
-    if (element.value.length === 0) {
-      var inputID=element.getAttribute('id');
-      var item=element.parentNode
-      var formLabel = item.querySelector('label')
-      element.classList.remove('decrease');
-      formLabel.classList.remove('show');
-      formLabel.classList.add('hide');
-      formLabel.classList.remove('up');
-    }
-    else {
-      var inputID=element.getAttribute('id');
-      var item=element.parentNode
-      var formLabel = item.querySelector('label')
-      element.classList.add('decrease');
-      formLabel.classList.add('show');
-      formLabel.classList.remove('hide');
-      formLabel.classList.remove('show');
-      formLabel.classList.add('up');
-    }
-    e.stopPropagation();
-  });
-}, this);
-
-
-
-
-
 var fixedMenu = document.querySelector('.cloned');
 var navigationIconFixed = fixedMenu.querySelector('.navigation-icon');
 var drawerFixed = fixedMenu.querySelector('.navigation-responsive');
@@ -205,3 +116,34 @@ navigationIconFixed.classList.add('open');
 navigationCloseFixed.classList.remove('open');
 e.stopPropagation();
 });
+
+
+// Make the form labels appear on input 
+
+var formInputs = document.querySelectorAll('input,textarea');
+formInputs.forEach(function(element) {
+  element.addEventListener('input', function(e) {
+    if (element.value.length === 0) {
+      var inputID=element.getAttribute('id');
+      var item=element.parentNode
+      var formLabel = item.querySelector('label')
+      element.classList.remove('decrease');
+      formLabel.classList.remove('show');
+      formLabel.classList.add('hide');
+      formLabel.classList.remove('up');
+    }
+    else {
+      var inputID=element.getAttribute('id');
+      var item=element.parentNode
+      var formLabel = item.querySelector('label')
+      element.classList.add('decrease');
+      formLabel.classList.add('show');
+      formLabel.classList.remove('hide');
+      formLabel.classList.remove('show');
+      formLabel.classList.add('up');
+    }
+    e.stopPropagation();
+  });
+}, this);
+
+
