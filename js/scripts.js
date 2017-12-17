@@ -111,6 +111,62 @@ e.stopPropagation();
 });
 
 
+
+/*var formInput = document.querySelector('input');
+formInput.addEventListener('input', function(e) {
+  if (formInput.value.length === 0) {
+    var inputID=formInput.getAttribute('id');
+    var item=formInput.parentNode
+    var formLabel = item.querySelector('label')
+    formInput.classList.remove('decrease');
+    formLabel.classList.remove('show');
+    formLabel.classList.add('hide');
+    formLabel.classList.remove('up');
+  }
+  else {
+    var inputID=formInput.getAttribute('id');
+    var item=formInput.parentNode
+    var formLabel = item.querySelector('label')
+    formInput.classList.add('decrease');
+    formLabel.classList.add('show');
+    formLabel.classList.remove('hide');
+    formLabel.classList.remove('show');
+    formLabel.classList.add('up');
+  }
+  e.stopPropagation();
+});*/
+
+
+var formInputs = document.querySelectorAll('input,textarea');
+formInputs.forEach(function(element) {
+  element.addEventListener('input', function(e) {
+    if (element.value.length === 0) {
+      var inputID=element.getAttribute('id');
+      var item=element.parentNode
+      var formLabel = item.querySelector('label')
+      element.classList.remove('decrease');
+      formLabel.classList.remove('show');
+      formLabel.classList.add('hide');
+      formLabel.classList.remove('up');
+    }
+    else {
+      var inputID=element.getAttribute('id');
+      var item=element.parentNode
+      var formLabel = item.querySelector('label')
+      element.classList.add('decrease');
+      formLabel.classList.add('show');
+      formLabel.classList.remove('hide');
+      formLabel.classList.remove('show');
+      formLabel.classList.add('up');
+    }
+    e.stopPropagation();
+  });
+}, this);
+
+
+
+
+
 var fixedMenu = document.querySelector('.cloned');
 var navigationIconFixed = fixedMenu.querySelector('.navigation-icon');
 var drawerFixed = fixedMenu.querySelector('.navigation-responsive');

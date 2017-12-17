@@ -501,21 +501,36 @@ form {
     padding: 40px 10px;
 }
 
-.form-item {
+.form-title {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
+    margin-bottom: 10px;
+    font-size: 1em;
 }
 
-.form-element {
+.form-item, form-item-button{
+    display: flex;
+    flex-wrap: wrap;
+    background:  white;
+    border-radius: 5px;
+    padding-top: 2px;
+    margin-bottom: 10px;
+}
+
+.form-item {
+    width: 100%; 
+}
+    
+
+input.form-element, textarea.form-element {
     font-size: 14px;
+    
 }
 
 input, textarea {
     width: 100%;
     margin: 5px 0px 10px 0px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     outline: 0;
     border: 0;
     font-family: 'Rajdhani', sans-serif;
@@ -547,8 +562,42 @@ textarea {
     height: 100px;
 }
 
-input:focus, textarea:focus {
-    border: solid 1px burlywood;
+.form-element {
+    padding-left: 10px;
+}
+
+.form-element.hide {  
+    position: absolute;
+    padding: 10px;
+    /* top: 0px; */
+    z-index: 500;
+    color: gray;
+    display: none;
+}
+
+.form-element.show {  
+    position: absolute;
+    padding: 10px;
+    /* top: 0px; */
+    z-index: 500;
+    color: gray;
+    display: block;
+    font-size: 14px;
+
+}
+
+.form-element.up {  
+    /* top: 0px; */
+    z-index: 1;
+    display: block;
+    font-size: 10px;
+    color: gray;
+}
+
+.form-element.decrease {
+    padding-bottom: 0px;
+    margin-top: 1px;
+    margin-bottom: 7px;
 }
 
 .about-map {
