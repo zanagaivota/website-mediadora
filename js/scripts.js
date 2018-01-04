@@ -1,10 +1,13 @@
 
-// Create a clone of the menu, right next to original. source: https://codepen.io/senff/pen/ayGvD
+
 
 var navigationBar = document.querySelector('.navigationBar');
 var navigationSticky = navigationBar.cloneNode(true);
+var nextSibling = document.getElementById('insurance');
 
-navigationBar.after(navigationSticky);
+/*navigationBar.after(navigationSticky);*/
+var parent = document.querySelector('body');
+parent.insertBefore(navigationSticky, nextSibling);
 
 navigationBar.classList.add('original');
 navigationSticky.classList.add('cloned');
@@ -120,6 +123,12 @@ e.stopPropagation();
 
 // Make the form labels appear on input 
 
+(function () {
+    if ( typeof NodeList.prototype.forEach === "function" ) return false;
+    NodeList.prototype.forEach = Array.prototype.forEach;
+})();
+
+
 var formInputs = document.querySelectorAll('input,textarea');
 formInputs.forEach(function(element) {
   element.addEventListener('input', function(e) {
@@ -128,7 +137,7 @@ formInputs.forEach(function(element) {
       var item=element.parentNode
       var formLabel = item.querySelector('label')
       element.classList.remove('decrease');
-      formLabel.classList.remove('show');
+      /*formLabel.classList.remove('show');*/
       formLabel.classList.add('hide');
       formLabel.classList.remove('up');
     }
@@ -137,9 +146,9 @@ formInputs.forEach(function(element) {
       var item=element.parentNode
       var formLabel = item.querySelector('label')
       element.classList.add('decrease');
-      formLabel.classList.add('show');
+      /*formLabel.classList.add('show');*/
       formLabel.classList.remove('hide');
-      formLabel.classList.remove('show');
+      /*formLabel.classList.remove('show');*/
       formLabel.classList.add('up');
     }
     e.stopPropagation();

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta name="robots" content="noindex">
     
+    
     <title>Mediadora de Seguros</title>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -38,7 +39,7 @@
                         </div>
                         <div class="card-image">
                             <div class="container-card-img">
-                                <div id="card-img1" onclick="this.classList.toggle('flipped');">
+                                <div id="card-img1">
                                     <img class="big-nav-image front" src="img/adult-2693054_188.jpg">
                                     <img class="big-nav-image back" src="img/mountain-2158661_188.jpg">
                                 </div>
@@ -47,7 +48,7 @@
                         <div class="card"></div>
                         <div class="card-image">
                             <div class="container-card-img">
-                                <div id="card-img2" onclick="this.classList.toggle('flipped');">
+                                <div id="card-img2">
                                     <img class="big-nav-image front" src="img/architecture-2475712_188.jpg">
                                     <img class="big-nav-image back" src="img/kitchen-2165756_188.jpg">
                                 </div>
@@ -63,7 +64,7 @@
                         </div>
                         <div class="card-image">
                             <div class="container-card-img">
-                                <div id="card-img3" onclick="this.classList.toggle('flipped');">
+                                <div id="card-img3">
                                     <img class="big-nav-image front" src="img/family-2485714_188.jpg">
                                     <img class="big-nav-image back" src="img/kid-1241817_188.jpg">
                                 </div>
@@ -71,7 +72,7 @@
                         </div>
                         <div class="card-image">
                             <div class="container-card-img">
-                                <div id="card-img4" onclick="this.classList.toggle('flipped');">
+                                <div id="card-img4">
                                     <img class="big-nav-image front" src="img/senior-2642030_188.jpg">
                                     <img class="big-nav-image back" src="img/pair-2914879_188.jpg">
                                 </div>
@@ -79,7 +80,7 @@
                         </div>
                         <div class="card-image">
                             <div class="container-card-img">
-                                <div id="card-img5" onclick="this.classList.toggle('flipped');">
+                                <div id="card-img5">
                                     <img class="big-nav-image front" src="img/road-2562568_188.jpg">
                                     <img class="big-nav-image back" src="img/skater-821502_188.jpg">
                                 </div>
@@ -88,7 +89,7 @@
                         <div class="card"></div>
                         <div class="card-image">
                             <div class="container-card-img">
-                                            <div id="card-img6" onclick="this.classList.toggle('flipped');">
+                                            <div id="card-img6">
                                                 <img class="big-nav-image front" src="img/industrial-1636390_188.jpg">
                                                 <img class="big-nav-image back" src="img/workplace-1245776_188.jpg">
                                             </div>
@@ -334,20 +335,20 @@
                                 <form action="/my-handling-form-page" method="post"> 
                                     <div class="form-title">Fale Connosco</div>
                                     <div class="form-item">
-                                        <label class="form-element hide" for="name">Nome:</label>
-                                        <input class="form-element" type="text" id="name" name="user_name" placeholder="Nome"/>
+                                        <label class="form-element hide" for="name">Nome *:</label>
+                                        <input class="form-element" type="text" id="name" name="user_name" required minlength="2" maxlength="10" placeholder="Nome *"/>
                                     </div>
                                     <div class="form-item">
-                                        <label class="form-element hide" for="mail">E-mail:</label>
-                                        <input class="form-element" type="email" id="mail" name="user_email" placeholder="E-mail"/>
+                                        <label class="form-element hide" for="mail">E-mail *:</label>
+                                        <input class="form-element" type="email" id="mail" name="user_email" required placeholder="E-mail *"/>
                                     </div>
                                     <div class="form-item">
-                                        <label class="form-element hide" for="subject">Assunto:</label>
-                                        <input class="form-element" type="text" id="subject" name="user_subject" placeholder="Assunto"/>
+                                        <label class="form-element hide" for="subject">Assunto *:</label>
+                                        <input class="form-element" type="text" id="subject" name="user_subject"  required placeholder="Assunto *"/>
                                     </div>
-                                    <div class="form-item">
-                                        <label class="form-element hide" for="msg">Mensagem:</label>
-                                        <textarea class="form-element" id="msg" name="user_message" placeholder="Mensagem"></textarea>
+                                    <div class="form-item-textarea">
+                                        <label class="form-element hide" for="msg">Mensagem *:</label>
+                                        <textarea class="form-element" id="msg" name="user_message" required maxlength="1024" placeholder="Mensagem *"></textarea>
                                     </div>         
                                     <div class="form-item-button">
                                         <button class="form-element" type="submit">Enviar</button>
@@ -376,17 +377,18 @@
         
         // Animate the images in the big navigation
 
+
         var switchImages = ['card-img1','card-img2','card-img3','card-img4','card-img5', 'card-img6'];
         var switchFunctions = [];
         switchImages.forEach(function(element) {
             var fn = function switchPic() {
                 className = "flipped"
-                var img1 = document.getElementById(element);
-                var img1Classes = img1.classList;
-                if (img1Classes.length > 0) {            
-                    img1.classList.remove(className);
+                var img = document.getElementById(element);
+                var imgClasses = img.classList;
+                if (imgClasses.length > 0) {            
+                    img.classList.remove(className);
                 } else {
-                    img1.classList.add(className);
+                    img.classList.add(className);
                 }
             }
             switchFunctions.push(fn);           
@@ -396,11 +398,14 @@
             setInterval(fn, interval);       
         }
 
-        interval = 6000;
-        switchFunctions.forEach(function(element) {
-            keepSwitchingPic(element,interval)
-            interval += 4000;
-        }, this);
+        if (navigator.userAgent.indexOf("Trident") === -1 ) {
+            interval = 6000;
+            switchFunctions.forEach(function(element) {
+                keepSwitchingPic(element,interval)
+                interval += 4000;
+            }, this);
+        };
+        
 
 
 

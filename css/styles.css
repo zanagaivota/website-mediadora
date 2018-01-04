@@ -162,7 +162,11 @@ section:last-of-type {
     width: 100%;
     height: 100%;
     position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -ms-transform-style: none;
     transition: transform 1s;
 }
 
@@ -176,14 +180,20 @@ section:last-of-type {
 }
 
 #card-img1 .back, #card-img2 .back, #card-img3 .back, #card-img4 .back, #card-img5 .back, #card-img6 .back {
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -ms-transform: rotateX( 180deg );
+    -o-transform: rotateX( 180deg );
     transform: rotateX( 180deg );
 }
 
 #card-img1.flipped, #card-img2.flipped, #card-img3.flipped, #card-img4.flipped, #card-img5.flipped , #card-img6.flipped {
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -ms-transform: rotateX( 180deg );
+    -o-transform: rotateX( 180deg );
     transform: rotateX( 180deg );
 }
-
-
 
 .navigationBar, navigationBar original, .navigationBar cloned {
     background-color: brown;
@@ -273,7 +283,7 @@ section:last-of-type {
 }
 
 .navigation-responsive-item a {
-    text-decoration-line: none;
+    text-decoration: none;
     display: block;
     color: #fff;
 }
@@ -508,45 +518,44 @@ form {
     font-size: 1em;
 }
 
-.form-item, form-item-button{
+.form-item, .form-item-textarea {
     display: flex;
     flex-wrap: wrap;
     background:  white;
     border-radius: 5px;
-    padding-top: 2px;
+    padding-top: 0px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .form-item {
-    width: 100%; 
+    height: 51px;
 }
-    
 
-input.form-element, textarea.form-element {
-    font-size: 14px;
-    
+
+.form-item-textarea {
+    height: 114px;
+
 }
 
 input, textarea {
     width: 100%;
-    margin: 5px 0px 10px 0px;
-    /*border-radius: 5px;*/
+    margin: 5px 10px 5px 10px;
     outline: 0;
     border: 0;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 14px;
-    padding: 5px 10px;
+    font-size: 16px;
 }
 
 button {
     border-radius: 5px;
     outline: 0;
     border: 0;
-    margin: 10px 0px;
+    margin-bottom: 10px;
     padding: 5px 10px;
     font-family: 'Rajdhani', sans-serif;
     background: #fff;
-    color: brown;
+    color: gray;
 }
 
 button:hover {
@@ -554,50 +563,33 @@ button:hover {
     color: #fff;
 }
 
+
+
+
 label {
     width: 100%;
 }
 
 textarea {
-    height: 100px;
+    height: 80px;
 }
 
-.form-element {
-    padding-left: 10px;
+label.form-element {
+    margin: 5px 10px 0px 10px;
 }
 
 .form-element.hide {  
-    position: absolute;
-    padding: 10px;
-    /* top: 0px; */
-    z-index: 500;
     color: gray;
     display: none;
 }
 
-.form-element.show {  
-    position: absolute;
-    padding: 10px;
-    /* top: 0px; */
-    z-index: 500;
-    color: gray;
-    display: block;
-    font-size: 14px;
-
-}
-
 .form-element.up {  
-    /* top: 0px; */
-    z-index: 1;
-    display: block;
-    font-size: 10px;
+    font-size: 12px;
     color: gray;
 }
 
 .form-element.decrease {
-    padding-bottom: 0px;
-    margin-top: 1px;
-    margin-bottom: 7px;
+    font-size: 14px;
 }
 
 .about-map {
