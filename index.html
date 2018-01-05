@@ -376,23 +376,8 @@
     <script>
         
         // Animate the images in the big navigation
-
-
+        
         var switchImages = ['card-img1','card-img2','card-img3','card-img4','card-img5', 'card-img6'];
-        var switchFunctions = [];
-        switchImages.forEach(function(element) {
-            var fn = function switchPic() {
-                className = "flipped"
-                var img = document.getElementById(element);
-                var imgClasses = img.classList;
-                if (imgClasses.length > 0) {            
-                    img.classList.remove(className);
-                } else {
-                    img.classList.add(className);
-                }
-            }
-            switchFunctions.push(fn);           
-        }, this);
 
         function keepSwitchingPic(fn,interval) {
             setInterval(fn, interval);       
@@ -400,12 +385,25 @@
 
         if (navigator.userAgent.indexOf("Trident") === -1 ) {
             interval = 6000;
-            switchFunctions.forEach(function(element) {
-                keepSwitchingPic(element,interval)
+            for (var index = 0; index < switchImages.length; index++) {
+
+                function Switcher (element) {
+                    keepSwitchingPic(function switchPic() {
+                        className = "flipped"
+                        var img = document.getElementById(element);
+                        var imgClasses = img.classList;
+                        if (imgClasses.length > 0) {            
+                            img.classList.remove(className);
+                        } else {
+                            img.classList.add(className);
+                        }
+                    }, interval)
                 interval += 4000;
-            }, this);
+                }
+
+                Switcher(switchImages[index]);
+            };
         };
-        
 
 
 

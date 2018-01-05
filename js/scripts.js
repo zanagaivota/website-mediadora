@@ -121,38 +121,33 @@ e.stopPropagation();
 });
 
 
-// Make the form labels appear on input 
-
-(function () {
-    if ( typeof NodeList.prototype.forEach === "function" ) return false;
-    NodeList.prototype.forEach = Array.prototype.forEach;
-})();
-
+// Make form labels appear on input
 
 var formInputs = document.querySelectorAll('input,textarea');
-formInputs.forEach(function(element) {
-  element.addEventListener('input', function(e) {
-    if (element.value.length === 0) {
-      var inputID=element.getAttribute('id');
-      var item=element.parentNode
-      var formLabel = item.querySelector('label')
-      element.classList.remove('decrease');
-      /*formLabel.classList.remove('show');*/
-      formLabel.classList.add('hide');
-      formLabel.classList.remove('up');
-    }
-    else {
-      var inputID=element.getAttribute('id');
-      var item=element.parentNode
-      var formLabel = item.querySelector('label')
-      element.classList.add('decrease');
-      /*formLabel.classList.add('show');*/
-      formLabel.classList.remove('hide');
-      /*formLabel.classList.remove('show');*/
-      formLabel.classList.add('up');
-    }
-    e.stopPropagation();
-  });
-}, this);
+for (var i = 0; i < formInputs.length; i++) {
 
+   function InputEvent (element) {
+    element.addEventListener('input', function(e) {
+      if (element.value.length === 0) {
+        var inputID=element.getAttribute('id');
+        var item=element.parentNode
+        var formLabel = item.querySelector('label')
+        element.classList.remove('decrease');
+        formLabel.classList.add('hide');
+        formLabel.classList.remove('up');
+      }
+      else {
+        var inputID=element.getAttribute('id');
+        var item=element.parentNode
+        var formLabel = item.querySelector('label')
+        element.classList.add('decrease');
+        formLabel.classList.remove('hide');
+        formLabel.classList.add('up');
+      }
+      e.stopPropagation();
+    });
+  };
 
+  InputEvent(formInputs[i]);
+
+};
