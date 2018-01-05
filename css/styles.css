@@ -487,12 +487,20 @@ section:last-of-type {
     font-size: 1.5em;
 }
 
-.contact, .doclink {
-    padding-left: 10px;
+.link {
+    display: flex;
 }
 
 .doclink, .emaillink {
     color: #fff;
+}
+
+.where, .phone, .email {
+    display: flex;
+}
+
+.entypo-mail, .entypo-location, .entypo-phone, .entypo-link {
+    min-width: 25px;
 }
 
 .form {
@@ -562,8 +570,6 @@ button:hover {
     background: burlywood;
     color: #fff;
 }
-
-
 
 
 label {
